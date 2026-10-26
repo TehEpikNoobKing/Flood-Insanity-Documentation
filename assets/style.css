@@ -17,7 +17,9 @@
 :root {
     --header-height: 64px;
     --sidebar-width: 240px;
-    --sidebar-collapsed-width: 64px;
+    
+    --content-maximum: 970px;
+
     --header-bg: #10041c;
     --page-bg: #29153c;
     
@@ -36,7 +38,9 @@ body {
     min-height: 100vh;
     background: var(--page-bg);
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana;
+
+    margin: 0 auto;
 }
 
 .divide-large{
@@ -156,19 +160,23 @@ a.play-button:active {
 .layout {
     display: flex;
     align-items: flex-start;
-    min-height: calc(100% - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
 }
 
 /* Sidebar */
 .sidebar {
     position: sticky;
     top: var(--header-height);
+
     flex: 0 0 var(--sidebar-width);
     width: var(--sidebar-width);
-    height: calc(100% - var(--header-height));
+
+    height: calc(100vh - var(--header-height));
+
     padding: 12px;
     background: var(--header-bg);
     box-shadow: 7px 0 12px #000;
+
     overflow-x: hidden;
     overflow-y: auto;
 }
