@@ -43,6 +43,13 @@ body {
     margin-top: 24px;
 }
 
+h1,
+h2 {
+    margin-top: 0;
+    font-family: RS, sans-serif;
+    text-shadow: 1px 1px 0 #000;
+}
+
 h1 {
     border-bottom: 2px solid;
 }
@@ -201,12 +208,6 @@ a.play-button:active {
     min-height: calc(100vh - var(--header-height));
     padding: 28px;
     background: var(--page-bg);
-}
-
-h1,
-h2 {
-    margin-top: 0;
-    font-family: RS, sans-serif;
 }
 
 /* On this page */
