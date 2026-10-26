@@ -216,7 +216,7 @@ a.play-button:active {
     top: var(--header-height);
     flex: 0 0 calc(var(--sidebar-width) * 1.2);
     width: calc(var(--sidebar-width) * 1.2);
-    height: calc(100vh - var(--header-height));
+    height: calc(100% - var(--header-height));
     padding: 0 0 0 24px;
     margin-right: 16px;
     margin-top: 24px;
