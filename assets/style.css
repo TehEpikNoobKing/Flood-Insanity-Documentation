@@ -17,7 +17,7 @@
 :root {
     --header-height: 64px;
     --sidebar-width: 240px;
-    
+
     --content-maximum: 970px;
 
     --header-bg: #10041c;
@@ -61,6 +61,10 @@ h1 {
 h2 {
     width: 60%;
     border-bottom: 1px solid;
+}
+
+section {
+    margin-top: 24px;
 }
 
 /* Links */
@@ -133,7 +137,7 @@ a.play-button:active {
 
 /* Header */
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: var(--header-height);
     width: 100%;
@@ -165,12 +169,11 @@ a.play-button:active {
 
 /* Sidebar */
 .sidebar {
-    position: sticky;
+    position: fixed;
     top: var(--header-height);
+    left: 0;
 
-    flex: 0 0 var(--sidebar-width);
     width: var(--sidebar-width);
-
     height: calc(100vh - var(--header-height));
 
     padding: 12px;
@@ -179,6 +182,7 @@ a.play-button:active {
 
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 90;
 }
 
 .sidebar nav {
@@ -214,20 +218,20 @@ a.play-button:active {
     flex: 1;
     min-width: 0;
     min-height: calc(100% - var(--header-height));
-    padding: 28px;
+    padding: calc(28px + var(--header-height)) calc(28px + (var(--sidebar-width) * 1.4)) 28px calc(28px + var(--sidebar-width));
     background: var(--page-bg);
 }
 
 /* On this page */
 .page-contents {
-    position: sticky;
+    position: fixed;
     top: var(--header-height);
+    right: 28px;
     flex: 0 0 calc(var(--sidebar-width) * 1.2);
     width: calc(var(--sidebar-width) * 1.2);
-    height: calc(100% - var(--header-height));
-    padding: 0 0 0 24px;
     margin-right: 16px;
-    margin-top: 24px;
+    margin-top: calc(24px + var(--header-height));
+    padding-left: 16px;
     background: transparent;
     overflow-x: hidden;
     overflow-y: auto;
@@ -291,7 +295,7 @@ a.play-button:active {
 
 .badge-blue {
     background: #113e9e80;
-    background: 1px solid #113e9e;
+    border: 1px solid #113e9e;
 }
 
 .badge-purple {

@@ -20,8 +20,6 @@
         <main class="content">
             <h1>Getting Started</h1>
             Welcome to Flood Insanity map making! This page will guide you through installation of the Map Development Kit, and the basic features that come included.
-        
-            <div class="divide-large"></div>
 
             <section id="installation">
                 <h2>Installation</h2>
@@ -47,14 +45,20 @@
                 </a>
             </section>
 
-            <div class="divide-large"></div>
-
             <section id="spawn">
                 <h2>
                     _Spawn <span class="badge badge-red">Required</span>
                 </h2>
                 <p>_Spawn is where the players first load into the map. The _Spawn part is usually <b>12x1x12</b> studs large, however it can be any size. Their character and their camera both face the FRONT surface of the part, so making the faces different from each other can be a good idea, which is already done through the Map Kit.</p>
                 <img src="./assets/screenshots/spawn.png" style="width: 50%; height: 50%">
+            </section>
+
+            <section id="exit">
+                <h2>
+                    _Exit <span class="badge badge-red">Required</span>
+                </h2>
+                <p>_Exit is where the part region where the players must reach to survive the map, and is only enabled when all the Buttons in the map have been pressed. _Exit can be resized to be any region where the players' goal is, but it must be CanCollide false.</p>
+                <img src="./assets/screenshots/exit.png" style="width: 50%; height: 50%">
             </section>
         </main>
 
