@@ -71,12 +71,51 @@ function initScrollSpy() {
     updateActiveSection()
 }
 
+function initSidebar() {
+    const sidebar = document.querySelector("#sidebar")
+    const toggle = document.querySelector("#sidebarToggle")
+
+    if (!sidebar || !toggle) return
+
+    toggle.addEventListener("click", () => {
+        const isOpen = sidebar.classList.toggle("open")
+
+        toggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        )
+
+        toggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        )
+
+        toggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>'
+    })
+
+    sidebar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            sidebar.classList.remove("open")
+
+            toggle.setAttribute("aria-expanded", "false")
+            toggle.setAttribute("aria-label", "Open navigation")
+
+            toggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>'
+        })
+    })
+}
+
 
 async function initPage() {
     await loadInclude("./assets/include/header.html", "#header-placeholder")
     await loadInclude("./assets/include/sidebar.html", "#sidebar-placeholder")
     await loadInclude("./assets/include/footer.html", "#footer-placeholder")
+
+    initScrollSpy()
+    initSidebar()
 }
 
 initPage()
-initScrollSpy()
