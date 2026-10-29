@@ -108,6 +108,39 @@ function initSidebar() {
     })
 }
 
+function initCurrentPage() {
+    const currentPath = window.location.pathname
+        .replace(/\/+$/, "")
+        .toLowerCase();
+
+    const links = document.querySelectorAll(
+        ".sidebar nav a[href]"
+    );
+
+    links.forEach(link => {
+        const url = new URL(link.href, window.location.href);
+
+        const linkPath = url.pathname
+            .replace(/\/+$/, "")
+            .toLowerCase();
+
+        // Treat / and /index.html as the same home page.
+        const isHome = path =>
+            path === "" || path.endsWith("/index.html");
+
+        const isCurrent = linkPath === currentPath ||
+            (isHome(linkPath) && isHome(currentPath));
+
+        link.classList.toggle("current-page", isCurrent);
+
+        if (isCurrent) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
 
 async function initPage() {
     await loadInclude("./assets/include/header.html", "#header-placeholder")
@@ -116,6 +149,7 @@ async function initPage() {
 
     initScrollSpy()
     initSidebar()
+    initCurrentPage()
 }
 
 initPage()

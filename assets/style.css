@@ -51,7 +51,7 @@ h1,
 h2 {
     margin-top: 0;
     font-family: RS, sans-serif;
-    text-shadow: 1px 1px 0 #000;
+    text-shadow: 2px 2px 0 #000;
 }
 
 h1 {
@@ -116,7 +116,7 @@ a[href]:visited {
 
     font-family: inherit;
     font-size: 16px;
-    text-shadow: 2px 2px 0 #2b1038;
+    text-shadow: 2px 3px 0 #202020;
 
     margin: 4px;
 
@@ -231,16 +231,23 @@ a.play-button:active {
 
 .sidebar nav a {
     display: block;
-    padding: 12px;
+    padding: 8px;
     border-radius: 6px;
     color: white;
     text-decoration: none;
     white-space: nowrap;
     font-family: RS, sans-serif;
+    text-shadow: none;
 }
 
 .sidebar nav a:hover {
-    background: #ffffff18;
+    background: linear-gradient(to right, #ffffff20, #ffffff00);
+    text-shadow: 2px 3px 0 #202020;
+}
+
+.sidebar nav a.current-page {
+    background: linear-gradient(to right, #ffffff48, #ffffff00);
+    text-shadow: 2px 3px 0 #202020;
 }
 
 /* Main content */
@@ -295,7 +302,7 @@ a.play-button:active {
     color: #fff;
     border-left: 3px solid #b98ae8;
     padding-left: 9px;
-    background: #ffffff12;
+    background: linear-gradient(to right, #ffffff20, #ffffff00);
     font-weight: bold;
 }
 
