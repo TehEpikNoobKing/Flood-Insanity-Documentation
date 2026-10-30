@@ -387,13 +387,15 @@ a.play-button:active {
     margin-right: 6px;
 }
 
-.footer a {
+.footer a,
+.footer a:visited {
     color: #666;
     text-decoration: none;
     padding: 0 12px;
 }
 
-.footer-links a:hover {
+.footer a:hover,
+.footer a:active {
     color: #fff;
     border-bottom: 4px solid #fff;
     background: linear-gradient(to bottom, #ffffff00, #ffffff50)
