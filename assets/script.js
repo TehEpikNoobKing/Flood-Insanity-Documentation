@@ -141,6 +141,18 @@ function initCurrentPage() {
     });
 }
 
+async function initHead() {
+    const response = await fetch("./assets/include/head.html");
+
+    if (!response.ok) {
+        throw new Error("Couldn't load shared head");
+    }
+
+    const html = await response.text();
+
+    document.head.insertAdjacentHTML("beforeend", html);
+}
+
 
 async function initPage() {
     await loadInclude("./assets/include/header.html", "#header-placeholder")
@@ -150,6 +162,7 @@ async function initPage() {
     initScrollSpy()
     initSidebar()
     initCurrentPage()
+    initHead()
 }
 
 initPage()
