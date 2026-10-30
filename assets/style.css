@@ -208,7 +208,7 @@ a.play-button:active {
     width: var(--sidebar-width);
     height: calc(100vh - var(--header-height));
 
-    padding: 12px;
+    padding: 24px 12px 12px 12px;
     background: var(--header-bg);
     box-shadow: 7px 0 12px #000;
 
@@ -220,7 +220,7 @@ a.play-button:active {
 .sidebar nav {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 .sidebar nav a,
@@ -233,7 +233,7 @@ a.play-button:active {
 
 .sidebar nav a {
     display: block;
-    padding: 8px;
+    padding: 6px 6px 6px 8px;
     border-radius: 6px;
     color: white;
     text-decoration: none;

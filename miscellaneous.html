@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Flood Insanity Docs</title>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="content">
+            <h1>Miscellaneous Features</h1>
+            <p>These features are also included in the map kit, but do not have their own pages.</p>
+
+            <section id="spawn">
+                <h2>
+                    _Spawn <span class="badge badge-red">Required</span>
+                </h2>
+                <p>_Spawn is where the players first load into the map. The _Spawn part is usually <b>12x1x12</b> studs large, however it can be any size. Their character and their camera both face the FRONT surface of the part, so making the faces different from each other can be a good idea. This is already done through the Map Kit, as the front side is marked with an "F".</p>
+                <img src="./assets/screenshots/spawn.png" style="width: 50%">
+            </section>
+
+            <section id="exit">
+                <h2>
+                    _Exit <span class="badge badge-red">Required</span>
+                </h2>
+                <p>_Exit is where the part region where the players must reach to survive the map, and is only enabled when all the Buttons in the map have been pressed. _Exit can be resized to be any region where the players' goal is, but it must be CanCollide false. There can be more than 1 Exit region inside the map, allowing for alternate routes or endings.</p>
+                <img src="./assets/screenshots/exit.png" style="width: 50%">
+            </section>
+
+            <section id="exitblock">
+                <h2>
+                    _ExitBlock
+                </h2>
+                <p>_ExitBlock(s) are parts that block off the Exit. These should also be CanCollide false, since they only become solid when a player survives. Having these where the Exit can be exposed to out-of-bounds areas can be important to hide things from the player.</p>
+                <p>These part(s) are optional, and are not required for the map to function.</p>
+                <img src="./assets/screenshots/exit-block.png" style="width: 50%">
+            </section>
+
+            <section id="thumbnailcamera">
+                <h2>
+                    ThumbnailCamera
+                </h2>
+                <p>ThumbnailCamera is a part that the player's camera locks onto during the loading screen, having a small swaying animation. This part can be anywhere with any size, but the camera is pointed from the center of the part, facing forward towards the front surface. It's advised to set this part to be transparent and CanCollide false, so that players don't notice it during gameplay.</p>
+                <p>This part is also optional, and is not required for the map to function.</p>
+                <img src="./assets/screenshots/thumbnail-camera.png" style="width: 50%">
+            </section>
+        </main>
+
+        <aside class="page-contents">
+            <h2>On this page</h2>
+            <a href="#spawn">_Spawn</a>
+            <a href="#exit">_Exit</a>
+            <a href="#exitblock">_ExitBlock</a>
+            <a href="#thumbnailcamera">ThumbnailCamera</a>
+        </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
+
+
