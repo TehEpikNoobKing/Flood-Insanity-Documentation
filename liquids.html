@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <div id="head-placeholder"></div>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="content">
+            <h1>Liquids</h1>
+            <p>Liquids are the core mechanic of Flood Insanity, allowing players to swim inside them while losing Oxygen. When a player's Oxygen reaches 0, they lose the round.</p>
+
+            <section id="states">
+                <h2>
+                    States
+                </h2>
+                <p>There are three states of a Liquid that you can choose: water, acid or lava. The state of a Liquid is defaulted to water if no state is defined or an unknown state is put in. You can change the state of a Liquid either by using the "Liquid_State" attribute, or using the <a href="./mapscript.html">MapScript</a>'s "ChangeLiquidState()" function.</p>
+                <table>
+                    <tr>
+                        <th>Image</th>
+                        <th>State</th>
+                        <th>Description</th>
+                        <th>Oxygen Drain</th>
+                    </tr>
+                    <tr>
+                        <td><img src="./assets/screenshots/water.png" style="width: 20ch"></td>
+                        <td style="padding: 0 32px">water</td>
+                        <td>The default state that all liquids are. Does nothing special, it's just a Liquid.</td>
+                        <td style="padding: 0 32px">-8 units/s</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./assets/screenshots/acid.png" style="width: 20ch"></td>
+                        <td style="padding: 0 32px">acid</td>
+                        <td>A deadlier version of water that drains oxygen around 4x as fast, introduces a special mechanic called "Acid Splash Penalties". Splash penalties are when a part of the Oxygen bar turns red, and re-entering an acid will instantly drain that section of the bar. The only way to get rid of penalties is by waiting outside of a Liquid.</td>
+                        <td style="padding: 0 32px">-30 units/s</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./assets/screenshots/lava.png" style="width: 20ch"></td>
+                        <td style="padding: 0 32px">lava</td>
+                        <td>Instantly kills the player upon submersion. Swimming in this liquid is impossible, and no amount of Oxygen can make it not kill you. >:))</td>
+                        <td style="padding: 0 32px">Instant kill</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="noswim">
+                <h2>
+                    NoSwim
+                </h2>
+                <p>NoSwim is an attribute you can add to a Liquid that makes it so players do not swim inside. Instead, they can run, jump, and use agility like on land.</p>
+                <img src="./assets/screenshots/noswim.png" style="width: 50%">
+            </section>
+            <section id="drain-multiplier">
+                <h2>
+                    DrainMultiplier
+                </h2>
+                <p>DrainMultiplier is another attribute you can add to Liquids. This attribute just makes it so that the Oxygen drain is multiplied by whatever this attribute is set to.</p>
+                <img src="./assets/screenshots/drainmultiplier.png" style="width: 50%">
+            </section>
+            <section id="depth-multiplier">
+                <h2>
+                    DepthMultiplier
+                </h2>
+                <p>DepthMultiplier is very similar to DrainMultiplier, but it changes based on the distance from the top face of the Liquid.</p>
+                <img src="./assets/screenshots/depthmultiplir.png" style="width: 50%">
+            </section>
+        </main>
+
+        <aside class="page-contents">
+            <h2>On this page</h2>
+            <a href="#states">States</a>
+            <a href="#noswim">NoSwim</a>
+            <a href="#drain-multiplier">DrainMultiplier</a>
+            <a href="#depth-multiplier">DepthMultiplier</a>
+        </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
+
+
